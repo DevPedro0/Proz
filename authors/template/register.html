@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{request.session.number}}
+    <form action="{% url "authors:log" %}" method="post">
+        <div class="content-form content-form-grid">
+            {% for f in form %}
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{f.id_for_label}}">{{f.label}}</label>
+                    {% if f.help_text %}
+                        <p class = ''>{{f.help_text}}</p>
+                    {% endif %}
+                    {{f}}
+
+                    {{f.errors}}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Registre">
+        </div>
+    </form>
+</body>
+</html>
