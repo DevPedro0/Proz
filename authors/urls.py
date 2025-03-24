@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import register, register_create
+from . import views
 
 app_name = 'authors'
 urlpatterns = [
-    path('register/', register, name='register-form'),
-    path('register/create/', register_create, name = 'log')
+    path('', views.view_homepage, name='home'),
+    path('register/', views.register, name='register-form'),
+    path('register/create/', views.register_create, name = 'log'),
+    path('login/', views.log, name='page-log-user')
 ]

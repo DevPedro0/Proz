@@ -20,11 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-7qwh3o$y-p*9w6uhaj)&mn(t6ghl%gj9!@p82&n-#@!#@(y+u3'
-=======
 SECRET_KEY = 'django-insecure-kur$wsmuo*9j5w0@%u88(q%y7q8qy47mw_*%k@wd#r=l09=m_+'
->>>>>>> f0fe4c1 (Initial)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,12 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'app'
-=======
-    'app',
     'authors'
->>>>>>> f0fe4c1 (Initial)
 ]
 
 MIDDLEWARE = [
@@ -64,13 +56,10 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'app/templates'],
-=======
         'DIRS': [
             BASE_DIR / 'authors/template/'
         ],
->>>>>>> f0fe4c1 (Initial)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,13 +122,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-<<<<<<< HEAD
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-=======
->>>>>>> f0fe4c1 (Initial)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
