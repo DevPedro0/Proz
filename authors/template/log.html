@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{form_action}}" method="post">
+        {% for form_log in form %}
+            {% csrf_token %}
+            <label for="{{form_log.id_for_label}}">{{form_log.label}}</label>
+            {{form_log}}
+        {% endfor %}
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

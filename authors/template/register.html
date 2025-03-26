@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     {{request.session.number}}
     <form action="{% url "authors:log" %}" method="post">
         <div class="content-form content-form-grid">
@@ -23,6 +24,10 @@
             {% endfor %}
             <input type="submit" value="Registre">
         </div>
+        {% if form.errors %}
+            
+            {{form.errors}}
+        {% endif %}
     </form>
 </body>
 </html>
