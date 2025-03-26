@@ -55,6 +55,7 @@ class FormsAuthors(forms.ModelForm):
             })
         }
         
+<<<<<<< HEAD
     def clean_password(self):
         data = self.cleaned_data.get('password')
         if 'atenção' in data:
@@ -82,3 +83,9 @@ class LoginForm(forms.Form):
      password = forms.CharField(
          widget=forms.PasswordInput()
      )
+=======
+class FormLogAppHomePage(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['email', 'password']
+>>>>>>> 1bdfcf6cba3429de99a1acc1d8bd0e9b8819edac

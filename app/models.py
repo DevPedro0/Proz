@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from .lists import ESTADOS
 
 ESTADOS = ()
 
@@ -38,7 +40,11 @@ class ModelDataNews(models.Model):
     
     # Foreing Keys Model
     author = models.ForeignKey(
+<<<<<<< HEAD
         to = AuthorForeingKeyModelNews,
+=======
+        to = User,
+>>>>>>> 1bdfcf6cba3429de99a1acc1d8bd0e9b8819edac
         on_delete=models.CASCADE,
     )
     
@@ -51,6 +57,11 @@ class ModelDataNews(models.Model):
         to = ThemeModel,
         on_delete=models.CASCADE
     )
+<<<<<<< HEAD
 
 class VaccineModel(models.Model):
     ...
+=======
+    
+    
+>>>>>>> 1bdfcf6cba3429de99a1acc1d8bd0e9b8819edac

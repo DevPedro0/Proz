@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <form action="{{form_action}}" method="post">
         {% for form_log in form %}
             {% csrf_token %}
@@ -14,5 +15,16 @@
         {% endfor %}
         <input type="submit" value="Login">
     </form>
+=======
+<<<<<<<< HEAD:app/templates/app/index.html
+    <a href="{% url "app:page-user-filter" user.id%}">Clique Me</a>
+========
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Entrar">
+    </form>
+>>>>>>>> 1bdfcf6cba3429de99a1acc1d8bd0e9b8819edac:authors/template/log.html
+>>>>>>> 1bdfcf6cba3429de99a1acc1d8bd0e9b8819edac
 </body>
 </html>
